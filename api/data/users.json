@@ -1,0 +1,11 @@
+[
+  {
+    "id": "mjkuwgs1i1agou6c2z",
+    "username": "admin",
+    "email": "admin@qarisma.com",
+    "password": "$2a$10$F9MCO4yXpD8SJqWj.PcCr.i7d7j5SyL5qgRBHfL6cW9xhGjQIPxx.",
+    "fullName": "مدير النظام",
+    "role": "ADMIN",
+    "createdAt": "2025-12-25T03:01:41.233Z"
+  }
+]

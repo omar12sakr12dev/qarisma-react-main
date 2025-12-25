@@ -1,0 +1,385 @@
+/* ========================================= */
+/* Responsive Design - Mobile First         */
+/* ========================================= */
+
+/* Base responsive utilities */
+.container-responsive {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ========================================= */
+/* Mobile (< 640px) */
+/* ========================================= */
+@media (max-width: 639px) {
+    .hide-mobile {
+        display: none !important;
+    }
+
+    .show-mobile {
+        display: block !important;
+    }
+
+    .text-mobile-sm {
+        font-size: 0.875rem;
+    }
+
+    .text-mobile-base {
+        font-size: 1rem;
+    }
+
+    .text-mobile-lg {
+        font-size: 1.25rem;
+    }
+
+    .text-mobile-xl {
+        font-size: 1.5rem;
+    }
+
+    .text-mobile-2xl {
+        font-size: 2rem;
+    }
+
+    .p-mobile-sm {
+        padding: 0.5rem;
+    }
+
+    .p-mobile-md {
+        padding: 1rem;
+    }
+
+    .p-mobile-lg {
+        padding: 1.5rem;
+    }
+
+    .gap-mobile-sm {
+        gap: 0.5rem;
+    }
+
+    .gap-mobile-md {
+        gap: 1rem;
+    }
+
+    .gap-mobile-lg {
+        gap: 1.5rem;
+    }
+
+    .grid-mobile-1 {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-mobile-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .flex-mobile-col {
+        flex-direction: column;
+    }
+
+    .flex-mobile-row {
+        flex-direction: row;
+    }
+
+    /* Parallax disabled on mobile for performance */
+    .parallax-bg {
+        background-attachment: scroll;
+    }
+
+    /* Reduce animations on mobile */
+    .reduce-motion-mobile {
+        animation-duration: 0.1s !important;
+        transition-duration: 0.1s !important;
+    }
+}
+
+/* ========================================= */
+/* Tablet (640px - 768px) */
+/* ========================================= */
+@media (min-width: 640px) and (max-width: 767px) {
+    .hide-tablet {
+        display: none !important;
+    }
+
+    .show-tablet {
+        display: block !important;
+    }
+
+    .container-responsive {
+        max-width: 640px;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .text-tablet-sm {
+        font-size: 0.875rem;
+    }
+
+    .text-tablet-base {
+        font-size: 1rem;
+    }
+
+    .text-tablet-lg {
+        font-size: 1.25rem;
+    }
+
+    .text-tablet-xl {
+        font-size: 1.75rem;
+    }
+
+    .text-tablet-2xl {
+        font-size: 2.5rem;
+    }
+
+    .grid-tablet-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-tablet-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ========================================= */
+/* Medium Tablet (768px - 1024px) */
+/* ========================================= */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .hide-md {
+        display: none !important;
+    }
+
+    .show-md {
+        display: block !important;
+    }
+
+    .container-responsive {
+        max-width: 768px;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .text-md-lg {
+        font-size: 1.5rem;
+    }
+
+    .text-md-xl {
+        font-size: 2rem;
+    }
+
+    .text-md-2xl {
+        font-size: 3rem;
+    }
+
+    .grid-md-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-md-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid-md-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* ========================================= */
+/* Desktop (1024px - 1280px) */
+/* ========================================= */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .hide-lg {
+        display: none !important;
+    }
+
+    .show-lg {
+        display: block !important;
+    }
+
+    .container-responsive {
+        max-width: 1024px;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .text-lg-xl {
+        font-size: 2rem;
+    }
+
+    .text-lg-2xl {
+        font-size: 3rem;
+    }
+
+    .text-lg-3xl {
+        font-size: 4rem;
+    }
+
+    .grid-lg-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid-lg-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .grid-lg-5 {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+/* ========================================= */
+/* Large Desktop (1280px - 1536px) */
+/* ========================================= */
+@media (min-width: 1280px) and (max-width: 1535px) {
+    .hide-xl {
+        display: none !important;
+    }
+
+    .show-xl {
+        display: block !important;
+    }
+
+    .container-responsive {
+        max-width: 1280px;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+
+    .text-xl-2xl {
+        font-size: 3rem;
+    }
+
+    .text-xl-3xl {
+        font-size: 4rem;
+    }
+
+    .text-xl-4xl {
+        font-size: 5rem;
+    }
+
+    .grid-xl-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .grid-xl-5 {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .grid-xl-6 {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+/* ========================================= */
+/* Extra Large Desktop (> 1536px) */
+/* ========================================= */
+@media (min-width: 1536px) {
+    .hide-2xl {
+        display: none !important;
+    }
+
+    .show-2xl {
+        display: block !important;
+    }
+
+    .container-responsive {
+        max-width: 1536px;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .text-2xl-3xl {
+        font-size: 4rem;
+    }
+
+    .text-2xl-4xl {
+        font-size: 5rem;
+    }
+
+    .text-2xl-5xl {
+        font-size: 6rem;
+    }
+
+    .grid-2xl-5 {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .grid-2xl-6 {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+/* ========================================= */
+/* Prefers Reduced Motion */
+/* ========================================= */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .butterfly-container,
+    .butterfly-image,
+    .float,
+    .pulse-on-hover,
+    .shimmer-text {
+        animation: none !important;
+    }
+}
+
+/* ========================================= */
+/* Touch Device Optimizations */
+/* ========================================= */
+@media (hover: none) and (pointer: coarse) {
+
+    /* Disable hover effects on touch devices */
+    .hover-lift:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    .tilt-card:hover {
+        transform: none;
+    }
+
+    /* Increase touch targets */
+    button,
+    a,
+    [role="button"] {
+        min-height: 44px;
+        min-width: 44px;
+    }
+}
+
+/* ========================================= */
+/* Print Styles */
+/* ========================================= */
+@media print {
+    .hide-print {
+        display: none !important;
+    }
+
+    .grain-overlay,
+    .butterfly-container,
+    .custom-cursor,
+    .cursor-dot,
+    .cursor-ring {
+        display: none !important;
+    }
+
+    body {
+        background: white !important;
+        color: black !important;
+    }
+
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}

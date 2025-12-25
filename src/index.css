@@ -1,0 +1,21 @@
+/* ========================================= */
+/* Main Styles - Import Modular CSS Files   */
+/* ========================================= */
+
+/* Base styles (Tailwind, resets, body) */
+@import './styles/base.css';
+
+/* Design tokens (CSS variables) */
+@import './styles/design-tokens.css';
+
+/* Animation keyframes and classes */
+@import './styles/animations.css';
+
+/* Premium effects (glass, gradients, 3D) */
+@import './styles/effects.css';
+
+/* Responsive breakpoints */
+@import './styles/responsive.css';
+
+/* Dark mode overrides */
+@import './styles/dark-mode.css';

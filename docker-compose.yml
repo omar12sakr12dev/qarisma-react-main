@@ -1,0 +1,63 @@
+version: '3.9'
+
+services:
+  # PostgreSQL Database
+  db:
+    image: postgres:16-alpine
+    container_name: qarisma-db
+    environment:
+      POSTGRES_USER: qarisma
+      POSTGRES_PASSWORD: qarisma_secret
+      POSTGRES_DB: qarisma
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - qarisma-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U qarisma"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Spring Boot Backend
+  backend:
+    build: ./backend
+    container_name: qarisma-backend
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/qarisma
+      - SPRING_DATASOURCE_USERNAME=qarisma
+      - SPRING_DATASOURCE_PASSWORD=qarisma_secret
+    ports:
+      - "8080:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - qarisma-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/api/auth/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # React Frontend with Nginx
+  frontend:
+    build: .
+    container_name: qarisma-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+    networks:
+      - qarisma-network
+
+volumes:
+  pgdata:
+
+networks:
+  qarisma-network:
+    driver: bridge

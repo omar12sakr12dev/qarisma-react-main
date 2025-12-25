@@ -1,0 +1,26 @@
+[
+  {
+    "id": "mjkuwgs50p4i8lhmuvp",
+    "name": "تقنية",
+    "slug": "technology",
+    "active": true
+  },
+  {
+    "id": "mjkuwgs59e9vf4entrk",
+    "name": "صحة",
+    "slug": "health",
+    "active": true
+  },
+  {
+    "id": "mjkuwgs5jlz3pcoust",
+    "name": "رياضة",
+    "slug": "sports",
+    "active": true
+  },
+  {
+    "id": "mjkuwgs5oyny3jdwedj",
+    "name": "تعليم",
+    "slug": "education",
+    "active": true
+  }
+]

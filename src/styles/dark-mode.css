@@ -1,0 +1,206 @@
+/* ========================================= */
+/* Dark Mode Styles                         */
+/* ========================================= */
+
+:root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f3f4f6;
+    --bg-tertiary: #e5e7eb;
+    --text-primary: #111827;
+    --text-secondary: #4b5563;
+    --text-muted: #9ca3af;
+    --border-color: #e5e7eb;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+.dark {
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-tertiary: #334155;
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --text-muted: #64748b;
+    --border-color: #334155;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Dark mode body */
+.dark body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+/* Background overrides */
+.dark .bg-white {
+    background-color: var(--bg-primary) !important;
+}
+
+.dark .bg-gray-50,
+.dark .bg-gray-100 {
+    background-color: var(--bg-secondary) !important;
+}
+
+.dark .bg-gray-200 {
+    background-color: var(--bg-tertiary) !important;
+}
+
+.dark .bg-background {
+    background-color: var(--bg-primary) !important;
+}
+
+.dark .bg-card {
+    background-color: var(--bg-secondary) !important;
+}
+
+/* Text overrides */
+.dark .text-gray-900,
+.dark .text-gray-800 {
+    color: var(--text-primary) !important;
+}
+
+.dark .text-gray-700,
+.dark .text-gray-600 {
+    color: var(--text-secondary) !important;
+}
+
+.dark .text-gray-500,
+.dark .text-gray-400 {
+    color: var(--text-muted) !important;
+}
+
+.dark .text-foreground {
+    color: var(--text-primary) !important;
+}
+
+/* Border overrides */
+.dark .border-gray-200,
+.dark .border-gray-300 {
+    border-color: var(--border-color) !important;
+}
+
+/* Light rose background adaptation */
+.dark .bg-light-rose {
+    background-color: rgba(30, 41, 59, 0.6) !important;
+}
+
+.dark .bg-light-rose\/60 {
+    background-color: rgba(30, 41, 59, 0.6) !important;
+}
+
+.dark .bg-secondary\/40 {
+    background-color: rgba(109, 40, 217, 0.2) !important;
+}
+
+/* Footer dark mode */
+.dark footer {
+    background-color: #1e293b !important;
+}
+
+/* Card shadows in dark mode */
+.dark .shadow-lg {
+    box-shadow: 0 10px 15px -3px var(--shadow-color), 0 4px 6px -2px var(--shadow-color) !important;
+}
+
+.dark .shadow-xl {
+    box-shadow: 0 20px 25px -5px var(--shadow-color), 0 10px 10px -5px var(--shadow-color) !important;
+}
+
+/* Glass effects in dark mode */
+.dark .glass {
+    background: rgba(30, 41, 59, 0.6);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark .glass-card {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.6), rgba(30, 41, 59, 0.3));
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Input fields in dark mode */
+.dark input,
+.dark textarea,
+.dark select {
+    background-color: var(--bg-secondary);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+    color: var(--text-muted);
+}
+
+.dark input:focus,
+.dark textarea:focus,
+.dark select:focus {
+    border-color: #8B5CF6;
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2);
+}
+
+/* Links in dark mode */
+.dark a:not(.btn):not(.button) {
+    color: #a78bfa;
+}
+
+.dark a:not(.btn):not(.button):hover {
+    color: #c4b5fd;
+}
+
+/* Hover states in dark mode */
+.dark .hover\:bg-gray-100:hover {
+    background-color: var(--bg-tertiary) !important;
+}
+
+.dark .hover\:bg-gray-50:hover {
+    background-color: var(--bg-secondary) !important;
+}
+
+/* Scrollbar in dark mode */
+.dark ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.dark ::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: var(--bg-tertiary);
+    border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+    background: #475569;
+}
+
+/* Selection in dark mode */
+.dark ::selection {
+    background-color: rgba(139, 92, 246, 0.4);
+    color: var(--text-primary);
+}
+
+/* Loading screen already dark, ensure consistency */
+.dark .loading-screen {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+}
+
+/* Skeleton loaders in dark mode */
+.dark .skeleton {
+    background: linear-gradient(90deg,
+            var(--bg-secondary) 0%,
+            var(--bg-tertiary) 50%,
+            var(--bg-secondary) 100%);
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.5s infinite;
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}

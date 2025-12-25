@@ -1,0 +1,27 @@
+/* هذا الملف لصفحة الهبوط فقط */
+
+.homeContainer {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  
+  /* الخلفية الأصلية */
+  background: url("/images/CurtineBackground.jpg") no-repeat center center;
+  background-size: cover;
+  position: relative;
+  
+  /* بنرجع لون الخط أبيض هنا */
+  color: #e4e4e4;
+}
+
+/* الطبقة الداكنة (Overlay) */
+.homeContainer::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 0; 
+}

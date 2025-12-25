@@ -1,0 +1,42 @@
+:root {
+  /* Colors */
+  --color-primary: hsl(210, 40%, 55%);
+  --color-primary-dark: hsl(210, 45%, 45%);
+  --color-bg: hsl(220, 15%, 10%);
+  --color-bg-light: hsl(220, 15%, 15%);
+  --color-surface: hsla(0, 0%, 100%, 0.08);
+  --color-text: hsl(0, 0%, 95%);
+  --color-muted: hsl(0, 0%, 60%);
+
+  /* Typography */
+  --font-family: 'Inter', system-ui, sans-serif;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.5rem;
+
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+
+  /* Glassmorphism */
+  --glass-bg: rgba(255, 255, 255, 0.08);
+  --glass-blur: blur(10px);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Global resets */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.5;
+}
